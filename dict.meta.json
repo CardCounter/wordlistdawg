@@ -1,0 +1,33 @@
+{
+  "source": {
+    "repo": "https://github.com/en-wl/wordlist",
+    "branch": "v2",
+    "commit": "744c092883db13112f6680892850c1f1b6547b81",
+    "archiveUrl": "https://github.com/en-wl/wordlist/archive/744c092883db13112f6680892850c1f1b6547b81.tar.gz",
+    "sha256": "092f3b8d7672e6d4ceeda195eac9eec9cd32a503666a62ab242589d7b67eb156"
+  },
+  "profile": {
+    "size": 80,
+    "spellings": [
+      "A",
+      "B",
+      "Z",
+      "C",
+      "D"
+    ],
+    "variantLevel": 5,
+    "classes": "core",
+    "normalization": "uppercase-alpha-strip"
+  },
+  "stats": {
+    "wordCount": 200894,
+    "minLength": 1,
+    "maxLength": 32,
+    "buildTimestamp": "2026-02-25T23:47:41.051652+00:00"
+  },
+  "artifacts": {
+    "dawgFile": "dict.dawg",
+    "dawgBytes": 401041,
+    "dawgSha256": "f6d30945c838ade003dbd37d9dfde184abfbe0b061a47eca324d2f94fad4d356"
+  }
+}

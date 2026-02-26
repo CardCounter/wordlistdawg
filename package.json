@@ -1,0 +1,19 @@
+{
+  "name": "wordlistdawg",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dict:words": "python3 scripts/build_words.py",
+    "dict:dawg": "node scripts/build_dawg.mjs",
+    "dict:build": "npm run dict:words && npm run dict:dawg",
+    "dict:test": "node --import tsx --test tests/*.test.ts"
+  },
+  "dependencies": {
+    "dawg-lookup": "2.2.1"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  }
+}

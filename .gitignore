@@ -1,0 +1,7 @@
+node_modules/
+__pycache__/
+*.pyc
+data/scowl/cache/
+data/scowl/src/
+data/scowl/source.lock.json
+npm-debug.log*
