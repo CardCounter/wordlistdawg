@@ -40,7 +40,6 @@ npm run dict:build
 ```
 
 `dict:words` downloads a pinned SCOWLv2 archive. On the first successful download, it records a checksum lock at `data/scowl/source.lock.json`; subsequent runs verify against that checksum.
-Both build steps print phase-by-phase progress with elapsed time (for example `[2/7] ... done in 1.2s`) so you can see where time is spent.
 
 ## Runtime API
 
