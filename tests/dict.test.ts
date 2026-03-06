@@ -3,10 +3,10 @@ import test from "node:test";
 
 import { __resetDictionaryForTests, isPrefix, isWord, normalizeWord } from "../src/dict";
 
-test("normalizeWord strips non A-Z and uppercases", () => {
-  assert.equal(normalizeWord("can't"), "CANT");
-  assert.equal(normalizeWord("co-op"), "COOP");
-  assert.equal(normalizeWord("café"), "CAF");
+test("normalizeWord strips non a-z and lowercases", () => {
+  assert.equal(normalizeWord("CAN'T"), "cant");
+  assert.equal(normalizeWord("CO-OP"), "coop");
+  assert.equal(normalizeWord("café"), "caf");
   assert.equal(normalizeWord("123"), "");
 });
 

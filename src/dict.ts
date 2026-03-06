@@ -49,7 +49,7 @@ async function loadPTrieCtor() {
 }
 
 export function normalizeWord(input: string): string {
-  return input.toUpperCase().replace(/[^A-Z]/gu, "");
+  return input.toLowerCase().replace(/[^a-z]/gu, "");
 }
 
 export async function loadDictionary(metaUrl = "/dict.meta.json"): Promise<void> {

@@ -68,7 +68,7 @@ class ProgressTracker:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Fetch SCOWLv2, filter to lowercase-only entries, normalize to A-Z uppercase, and emit words.txt + dict.meta.json."
+        description="Fetch SCOWLv2, filter to lowercase-only entries, normalize to a-z lowercase, and emit words.txt + dict.meta.json."
     )
     parser.add_argument("--size", type=int, default=80, help="SCOWL size (default: 80)")
     parser.add_argument(
@@ -203,7 +203,7 @@ def normalize_words(raw_text: str) -> list[str]:
         # are proper nouns (e.g. "Aaron") or abbreviations (e.g. "FBI").
         if re.search(r"[A-Z]", stripped):
             continue
-        word = re.sub(r"[^A-Z]", "", stripped.upper())
+        word = re.sub(r"[^a-z]", "", stripped.lower())
         if word:
             deduped.add(word)
     return sorted(deduped)
@@ -300,7 +300,7 @@ def write_meta(
         "spellings": [segment.strip() for segment in spellings.split(",") if segment.strip()],
         "variantLevel": variant_level,
         "classes": "core",
-        "normalization": "lowercase-only-then-uppercase-alpha-strip",
+        "normalization": "lowercase-only-then-lowercase-alpha-strip",
     }
     meta["stats"] = {
         "wordCount": len(words),
